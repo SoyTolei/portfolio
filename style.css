@@ -364,9 +364,10 @@ a { color: inherit; }
     height: 100%;
     border-radius: 50%;
     object-fit: cover;
-    object-position: center 22%;
+    object-position: center 38%;
     display: block;
     background: var(--surface);
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.06);
 }
 
 .hero-chips {
