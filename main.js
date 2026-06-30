@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     initNav();
     initNavSpy();
+    initWorkHoverPreviews();
 });
 
 /* ── Nav ── */
@@ -55,6 +56,19 @@ function initNavSpy() {
     }, { rootMargin: '-35% 0px -55% 0px', threshold: 0 });
 
     sections.forEach(s => observer.observe(s));
+}
+
+function initWorkHoverPreviews() {
+    document.querySelectorAll('.work-thumb--hover').forEach(thumb => {
+        const loadPreview = () => {
+            const img = thumb.querySelector('.work-thumb__preview img[data-src]');
+            if (!img || img.dataset.loaded) return;
+            img.src = img.dataset.src;
+            img.dataset.loaded = 'true';
+        };
+        thumb.addEventListener('mouseenter', loadPreview, { once: true });
+        thumb.addEventListener('focusin', loadPreview, { once: true });
+    });
 }
 
 /* ── i18n ── */
