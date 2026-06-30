@@ -824,7 +824,7 @@ a { color: inherit; }
 .work-thumb--hover:hover,
 .work-thumb--hover:focus-visible {
     z-index: 20;
-    transform: scale(2.85);
+    transform: scale(3.05);
     box-shadow:
         0 18px 48px rgba(0, 0, 0, 0.48),
         0 0 0 1px var(--border);
@@ -843,7 +843,7 @@ a { color: inherit; }
 @media (max-width: 900px) {
     .work-thumb--hover:hover,
     .work-thumb--hover:focus-visible {
-        transform: scale(1.85);
+        transform: scale(2);
         transform-origin: center center;
     }
 }
