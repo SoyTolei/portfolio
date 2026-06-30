@@ -802,6 +802,7 @@ a { color: inherit; }
     transition: transform 0.28s ease, box-shadow 0.28s ease;
     transform-origin: left center;
     z-index: 1;
+    overflow: visible;
 }
 
 .work-thumb--hover .work-thumb__cover {
@@ -816,6 +817,8 @@ a { color: inherit; }
     transition: opacity 0.22s ease;
     pointer-events: none;
     background: var(--surface);
+    border-radius: var(--radius);
+    overflow: hidden;
 }
 
 .work-thumb--hover .work-thumb__preview img {
@@ -848,13 +851,13 @@ a { color: inherit; }
     background: #1a1a18;
 }
 
-.work-thumb--hover:has(.work-thumb__preview img):hover .work-thumb__cover,
-.work-thumb--hover:has(.work-thumb__preview img):focus-visible .work-thumb__cover {
+.work-thumb--hover:has(.work-thumb__preview img).work-thumb--ready:hover .work-thumb__cover,
+.work-thumb--hover:has(.work-thumb__preview img).work-thumb--ready:focus-visible .work-thumb__cover {
     opacity: 0;
 }
 
-.work-thumb--hover:has(.work-thumb__preview img):hover .work-thumb__preview,
-.work-thumb--hover:has(.work-thumb__preview img):focus-visible .work-thumb__preview {
+.work-thumb--hover:has(.work-thumb__preview img).work-thumb--ready:hover .work-thumb__preview,
+.work-thumb--hover:has(.work-thumb__preview img).work-thumb--ready:focus-visible .work-thumb__preview {
     opacity: 1;
 }
 

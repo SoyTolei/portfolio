@@ -60,14 +60,23 @@ function initNavSpy() {
 
 function initWorkHoverPreviews() {
     document.querySelectorAll('.work-thumb--hover').forEach(thumb => {
+        const img = thumb.querySelector('.work-thumb__preview img[data-src]');
+        if (!img) return;
+
         const loadPreview = () => {
-            const img = thumb.querySelector('.work-thumb__preview img[data-src]');
-            if (!img || img.dataset.loaded) return;
-            img.src = img.dataset.src;
+            if (img.dataset.loaded) return;
             img.dataset.loaded = 'true';
+
+            const markReady = () => thumb.classList.add('work-thumb--ready');
+            img.addEventListener('load', markReady, { once: true });
+            img.addEventListener('error', markReady, { once: true });
+            img.src = img.dataset.src;
+
+            if (img.complete && img.naturalWidth > 0) markReady();
         };
-        thumb.addEventListener('mouseenter', loadPreview, { once: true });
-        thumb.addEventListener('focusin', loadPreview, { once: true });
+
+        thumb.addEventListener('mouseenter', loadPreview);
+        thumb.addEventListener('focusin', loadPreview);
     });
 }
 
