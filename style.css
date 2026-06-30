@@ -507,7 +507,60 @@ a { color: inherit; }
 .exp-meta {
     display: flex;
     flex-direction: column;
-    gap: 4px;
+    gap: 6px;
+}
+
+.exp-logo {
+    width: 34px;
+    height: 34px;
+    object-fit: contain;
+    opacity: 0.42;
+    filter: grayscale(0.35) brightness(0.95);
+    transition: opacity 0.22s, filter 0.22s;
+    margin-bottom: 2px;
+}
+
+.exp-row:hover .exp-logo {
+    opacity: 0.88;
+    filter: none;
+}
+
+.exp-logo--tr { border-radius: 50%; }
+
+.exp-logo--gms {
+    filter: grayscale(0.2) brightness(1.6) contrast(1.1);
+    opacity: 0.38;
+}
+
+[data-theme="light"] .exp-logo--gms {
+    filter: grayscale(0.15) brightness(0.85);
+    opacity: 0.5;
+}
+
+.exp-logo--9z {
+    border-radius: 4px;
+}
+
+.exp-logo-fallback {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    font-family: var(--mono);
+    font-size: 0.62rem;
+    font-weight: 700;
+    color: var(--text-dim);
+    border: 1px solid var(--border-soft);
+    border-radius: 4px;
+    opacity: 0.55;
+    margin-bottom: 2px;
+}
+
+.exp-row:hover .exp-logo-fallback {
+    opacity: 0.9;
+    color: var(--accent);
+    border-color: var(--accent-dim);
 }
 
 .exp-meta time {
