@@ -100,11 +100,11 @@
                 <div class="prose">
                     <p data-i18n="about_p1">Me interesa resolver de raíz: dejar el sistema estable, el caso bien documentado y que quien lo retome no tenga que reconstruir todo desde cero.</p>
                     <p data-i18n="about_p2">En <strong>Thomson Reuters</strong> doy soporte a empresas y estudios contables con <strong>Bejerman</strong> — instalaciones, SQL Server, consultas y entornos donde un error en cierre de mes no es negociable.</p>
-                    <p data-i18n="about_p3">Para agilizar el trabajo armé <strong>ST2</strong>: un exe, una versión web, backup de bases y una consola de mantenimiento. Empezó en Python; hoy está en <strong>C# / .NET</strong>. Son herramientas personales, no productos oficiales de TR.</p>
+                    <p data-i18n="about_p3">Para la mesa de ayuda armé <strong>ST2</strong> — <strong>S</strong>oluciones <strong>T</strong>ecnológicas: herramientas propias para que el agente trabaje más cómodo y consistente. Empezó con un .bat de mantenimiento; hoy suma exe, backup de bases y versión web en <strong>C# / .NET</strong>. No son productos oficiales de TR.</p>
                 </div>
                 <aside class="note-card">
                     <p class="note-label" data-i18n="note_label">// por qué ST2</p>
-                    <p data-i18n="note_body">Cada módulo salió de algo repetitivo en la mesa: backups que tardaban, textos de ticket distintos según quién atendía, chequeos de instalación a mano. Automatizar eso me ahorra tiempo y deja el trabajo más consistente.</p>
+                    <p data-i18n="note_body">Cada módulo cerró algo repetitivo en soporte: chequeos de instalación a mano, backups lentos, textos de ticket distintos según quién atendía. Primero la consola .bat, después el exe, el backup y la web.</p>
                 </aside>
             </div>
         </section>
@@ -130,7 +130,7 @@
                             <ul>
                                 <li data-i18n="exp_tr_b1">Soporte Bejerman a empresas y estudios contables.</li>
                                 <li data-i18n="exp_tr_b2">SQL Server, instalación y configuración de sistemas.</li>
-                                <li data-i18n="exp_tr_b3">Desarrollo de la suite ST2 para el flujo diario de soporte.</li>
+                                <li data-i18n="exp_tr_b3">Desarrollo de la suite ST2 (Soluciones Tecnológicas) para el flujo diario de soporte.</li>
                             </ul>
                         </div>
                     </li>
@@ -197,7 +197,7 @@
             <div class="wrap">
                 <header class="block-head">
                     <h2 class="block-title" data-i18n="projects_title">Proyectos</h2>
-                    <p class="block-lead" data-i18n="projects_lead">Herramientas que uso o usé en soporte. La mayoría son ST2 — iniciativas personales de productividad.</p>
+                    <p class="block-lead" data-i18n="projects_lead">Herramientas que uso en soporte. La suite <strong>ST2</strong> nació en la mesa de ayuda de TR para hacer el día a día más práctico para el agente.</p>
                     <p class="disclaimer" data-i18n="projects_disclaimer">Las herramientas ST2 no representan productos ni posiciones oficiales de Thomson Reuters.</p>
                 </header>
 
@@ -215,7 +215,7 @@
                                 <h4 data-i18n="proj_st2web_title">ST2 WEB</h4>
                                 <a href="https://st2.tolei.dev" class="work-link" target="_blank" rel="noopener noreferrer" data-i18n="link_live">st2.tolei.dev ↗</a>
                             </div>
-                            <p data-i18n="proj_st2web_p1">La suite en el navegador: misma lógica que el exe, API en servidor, frontend estático. Planillas y buscador sin instalar nada.</p>
+                            <p data-i18n="proj_st2web_p1">La suite en el navegador — último paso de la evolución. Misma lógica que el exe, API en servidor. Planillas y buscador sin instalar nada.</p>
                             <p class="work-stack">ASP.NET Core 9 · JavaScript · REST</p>
                         </div>
                     </article>
@@ -229,7 +229,7 @@
                                 <h4 data-i18n="proj_st2_title">ST2.exe</h4>
                                 <span class="work-tag" data-i18n="proj_st2_badge">Ejecutable · .NET</span>
                             </div>
-                            <p data-i18n="proj_st2_p1">Versión desktop original de la suite, anterior a la migración web. Se usó en producción hasta completar la migración. Documentación de casos, base de conocimiento y recursos técnicos en un solo ejecutable.</p>
+                            <p data-i18n="proj_st2_p1">Ejecutable desktop de la suite, usado en producción hasta la migración web. Documentación de casos, base de conocimiento y recursos técnicos en un solo ejecutable.</p>
                             <p class="work-stack">C# · .NET 8 · WPF · WebView2 · SQLite</p>
                         </div>
                     </article>
@@ -263,7 +263,7 @@
                                 <h4 data-i18n="proj_st2bat_title">ST2.bat — Mantenimiento Bejerman</h4>
                                 <span class="work-tag">Console</span>
                             </div>
-                            <p data-i18n="proj_st2bat_p1">Consola de campo: detecta instalación por registro y centraliza diagnósticos que antes eran 15 pasos manuales.</p>
+                            <p data-i18n="proj_st2bat_p1">El primer módulo de la suite: consola de campo que detecta instalación por registro y centraliza diagnósticos que antes eran 15 pasos manuales.</p>
                             <p class="work-stack">Batch · PowerShell · Registro Windows</p>
                         </div>
                     </article>
@@ -290,12 +290,12 @@
 
                 <h3 class="group-label" data-i18n="group_side">Side project</h3>
                 <div class="work-list">
-                    <article class="work-item">
-                        <a class="work-thumb work-thumb--game" href="https://referralrunner.tolei.dev" target="_blank" rel="noopener noreferrer">
-                            <picture>
-                                <source srcset="assets/projects/media/referral-runner.png" type="image/png">
-                                <img src="assets/projects/referral-runner.svg" alt="Referral Runner" loading="lazy">
-                            </picture>
+                    <article class="work-item work-item--featured">
+                        <a class="work-thumb work-thumb--hover work-thumb--game" href="https://referralrunner.tolei.dev" target="_blank" rel="noopener noreferrer" aria-label="Referral Runner">
+                            <img class="work-thumb__cover" src="assets/projects/media/referral-runner.png" alt="Referral Runner" loading="lazy">
+                            <span class="work-thumb__preview" aria-hidden="true">
+                                <img data-src="assets/projects/media/referral-runner-hover.gif" alt="">
+                            </span>
                         </a>
                         <div class="work-body">
                             <div class="work-top">

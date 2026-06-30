@@ -848,13 +848,13 @@ a { color: inherit; }
     }
 }
 
-.work-thumb--game img {
+.work-thumb--game .work-thumb__cover {
     object-fit: contain;
     padding: 8px;
     background: #e8ecf0;
 }
 
-[data-theme="light"] .work-thumb--game img { background: #dde2e8; }
+[data-theme="light"] .work-thumb--game .work-thumb__cover { background: #dde2e8; }
 
 .work-top {
     display: flex;
