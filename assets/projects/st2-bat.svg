@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" fill="none">
+  <rect width="640" height="360" fill="#0A0A0A"/>
+  <rect x="32" y="28" width="576" height="304" rx="8" fill="#0C0C0C" stroke="rgba(255,255,255,0.08)"/>
+  <rect x="32" y="28" width="576" height="28" fill="#141414"/>
+  <text x="48" y="47" fill="#F35C19" font-family="Consolas,monospace" font-size="11" font-weight="700">ST2.bat — Soluciones Tecnologicas Bejerman</text>
+  <text x="48" y="78" fill="#4ADE80" font-family="Consolas,monospace" font-size="11">[1] Planilla tecnica (permisos, compatibilidad, firewall, locale, ODBC)</text>
+  <text x="48" y="98" fill="#E8E4DD" font-family="Consolas,monospace" font-size="10">[2] Registro DLLs, OCX, Crystal Reports, TLB, DCUBE</text>
+  <text x="48" y="118" fill="#E8E4DD" font-family="Consolas,monospace" font-size="10">[3] Herramientas TEC</text>
+  <text x="64" y="140" fill="#737373" font-family="Consolas,monospace" font-size="10">- Finalizar procesos Bejerman (sistema / sesion)</text>
+  <text x="64" y="158" fill="#737373" font-family="Consolas,monospace" font-size="10">- Activar / desactivar DEP</text>
+  <text x="64" y="176" fill="#737373" font-family="Consolas,monospace" font-size="10">- Comparar UPDATES vs instalacion local</text>
+  <text x="64" y="194" fill="#737373" font-family="Consolas,monospace" font-size="10">- Detectar archivos renombrados</text>
+  <text x="48" y="224" fill="#737373" font-family="Consolas,monospace" font-size="10">Ruta: registro Windows Sistemas Bejerman</text>
+  <text x="48" y="252" fill="#4ADE80" font-family="Consolas,monospace" font-size="11">[OK] Planilla tecnica completada — 5 pasos</text>
+  <rect x="48" y="276" width="10" height="14" fill="#F35C19">
+    <animate attributeName="opacity" values="1;0.2;1" dur="1s" repeatCount="indefinite"/>
+  </rect>
+</svg>

@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" fill="none">
+  <rect width="640" height="360" fill="#0F0F0F"/>
+  <ellipse cx="320" cy="180" rx="200" ry="120" fill="rgba(232,228,221,0.04)" stroke="rgba(232,228,221,0.12)"/>
+  <rect x="200" y="100" width="240" height="160" rx="12" fill="#141414" stroke="rgba(255,255,255,0.1)"/>
+  <text x="320" y="136" text-anchor="middle" fill="#E8E4DD" font-family="system-ui,sans-serif" font-size="16" font-weight="700">SQL Server</text>
+  <text x="320" y="158" text-anchor="middle" fill="#737373" font-family="system-ui,sans-serif" font-size="11">Bejerman · Enterprise</text>
+  <rect x="224" y="176" width="192" height="8" rx="2" fill="#2A2A2A"/>
+  <rect x="224" y="192" width="160" height="8" rx="2" fill="#2A2A2A"/>
+  <rect x="224" y="208" width="176" height="8" rx="2" fill="#2A2A2A"/>
+  <rect x="224" y="232" width="80" height="20" rx="4" fill="rgba(232,228,221,0.15)"/>
+  <text x="264" y="246" text-anchor="middle" fill="#E8E4DD" font-family="monospace" font-size="9">T-SQL</text>
+  <rect x="312" y="232" width="80" height="20" rx="4" fill="rgba(232,228,221,0.15)"/>
+  <text x="352" y="246" text-anchor="middle" fill="#E8E4DD" font-family="monospace" font-size="9">SSMS</text>
+  <circle cx="120" cy="120" r="36" fill="#1A1A1A" stroke="rgba(255,255,255,0.08)"/>
+  <text x="120" y="125" text-anchor="middle" fill="#737373" font-family="system-ui,sans-serif" font-size="10">Query</text>
+  <circle cx="520" cy="240" r="36" fill="#1A1A1A" stroke="rgba(255,255,255,0.08)"/>
+  <text x="520" y="245" text-anchor="middle" fill="#737373" font-family="system-ui,sans-serif" font-size="10">Index</text>
+</svg>

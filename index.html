@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tolei | Leonel Gallo — Soporte IT, SQL & .NET</title>
+    <meta name="description" content="Portfolio de Tolei (Leonel Gallo). Soporte técnico Thomson Reuters, SQL Server, suite ST2 y herramientas con .NET y Python. Buenos Aires, Argentina.">
+    <meta name="keywords" content="Leonel Gallo, Soporte Técnico, SQL Server, C#, .NET, ST2, Bejerman, Python, Automatización, Buenos Aires">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        (function () {
+            var theme = localStorage.getItem('tolei-portfolio-theme');
+            if (!theme && window.matchMedia('(prefers-color-scheme: light)').matches) theme = 'light';
+            if (theme) document.documentElement.setAttribute('data-theme', theme);
+        })();
+    </script>
+</head>
+<body>
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <span class="logo-mark" aria-hidden="true">T.</span>
+                <span class="logo-text">
+                    <span class="logo-main">Tolei</span>
+                    <span class="logo-sub" data-i18n="logo_sub">Leonel Gallo · IT Support</span>
+                </span>
+            </a>
+            <button class="nav-toggle" aria-label="Menú de navegación" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+            <div class="nav-end">
+                <ul class="nav-links">
+                    <li><a href="#about" class="nav-link" data-i18n="nav_about">Sobre mí</a></li>
+                    <li><a href="#experience" class="nav-link" data-i18n="nav_experience">Experiencia</a></li>
+                    <li><a href="#skills" class="nav-link" data-i18n="nav_skills">Skills</a></li>
+                    <li><a href="#projects" class="nav-link" data-i18n="nav_projects">Proyectos</a></li>
+                    <li><a href="#contact" class="nav-link" data-i18n="nav_contact">Contacto</a></li>
+                </ul>
+                <div class="nav-controls">
+                    <button class="theme-toggle" type="button" aria-label="Cambiar tema" data-theme="dark">
+                        <i data-lucide="sun" class="theme-icon theme-icon-sun"></i>
+                        <i data-lucide="moon" class="theme-icon theme-icon-moon"></i>
+                    </button>
+                    <button class="lang-toggle" type="button" aria-label="Cambiar idioma" data-lang="es">
+                        <span class="lang-label">ES</span>
+                        <span class="lang-divider">/</span>
+                        <span class="lang-alt">EN</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="hero">
+            <div class="hero-bg" aria-hidden="true">
+                <div class="hero-orb hero-orb--1"></div>
+                <div class="hero-orb hero-orb--2"></div>
+                <div class="hero-grid-lines"></div>
+            </div>
+            <div class="container hero-grid">
+                <div class="hero-content">
+                    <span class="badge" data-i18n="hero_badge">Thomson Reuters · Bejerman · ST2</span>
+                    <h1 class="hero-title-block">
+                        <span class="hero-name" data-i18n="hero_name">Leonel Gallo</span>
+                        <span class="hero-alias" data-i18n="hero_alias">Tolei</span>
+                    </h1>
+                    <p class="hero-tagline" data-i18n="hero_tagline">Soporte técnico · SQL Server · automatización</p>
+                    <p class="headline" data-i18n="hero_subtitle">Mantengo entornos Bejerman y SQL Server en producción. Cuando algo se repite en la mesa de ayuda, lo llevo a la suite <strong>ST2</strong> — empezó en Python, hoy en .NET. Buenos Aires.</p>
+                    <div class="hero-stats">
+                        <div class="hero-stat">
+                            <span class="hero-stat-num">5+</span>
+                            <span class="hero-stat-label" data-i18n="hero_stat_years">Años en IT</span>
+                        </div>
+                        <div class="hero-stat">
+                            <span class="hero-stat-num">8</span>
+                            <span class="hero-stat-label" data-i18n="hero_stat_projects">Proyectos</span>
+                        </div>
+                        <div class="hero-stat">
+                            <span class="hero-stat-num">ST2</span>
+                            <span class="hero-stat-label" data-i18n="hero_stat_suite">Suite propia</span>
+                        </div>
+                    </div>
+                    <div class="hero-actions">
+                        <a href="#projects" class="btn btn-primary" data-i18n="hero_cta_projects">Ver proyectos</a>
+                        <a href="CV2026.pdf" class="btn btn-secondary" download data-i18n="hero_cta_cv">Descargar CV</a>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="profile-frame">
+                        <img src="leonel-photo.png" alt="Tolei — Leonel Gallo" class="profile-pic" width="300" height="300">
+                    </div>
+                    <div class="hero-chips" aria-hidden="true">
+                        <span class="hero-chip hero-chip--accent"><i data-lucide="database"></i> SQL Server</span>
+                        <span class="hero-chip"><i data-lucide="code-2"></i> .NET</span>
+                        <span class="hero-chip hero-chip--accent"><i data-lucide="file-code"></i> Python</span>
+                        <span class="hero-chip"><i data-lucide="braces"></i> C#</span>
+                        <span class="hero-chip hero-chip--accent"><i data-lucide="terminal"></i> PowerShell</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-label">01 — <span data-i18n="about_label">Perfil</span></span>
+                    <h2 class="section-title" data-i18n="about_title">Sobre mí</h2>
+                    <p class="section-lead" data-i18n="about_lead">Soporte técnico de base, desarrollador de herramientas por necesidad. Mi fuerte está en entender el problema del usuario y traducirlo en algo que funcione de verdad.</p>
+                </div>
+                <div class="about-grid">
+                    <div class="about-text">
+                        <p data-i18n="about_p1">Trabajo en soporte técnico e infraestructura desde hace varios años. Me enfoco en mantener sistemas estables, resolver incidencias con claridad y dejar procesos más ordenados que cuando los encontré.</p>
+                        <p data-i18n="about_p2">En <strong>Thomson Reuters</strong> doy soporte a empresas y estudios contables con <strong>Sistemas Bejerman</strong>: SQL Server, instalaciones, consultas y entornos críticos donde cada minuto cuenta.</p>
+                        <p data-i18n="about_p3">En paralelo al trabajo diario, desarrollé la suite <strong>ST2</strong> — herramientas de productividad para documentar casos, consultar conocimiento técnico y automatizar tareas de soporte en Bejerman. Empezó en Python; hoy es <strong>C# / .NET</strong> con versión web.</p>
+                        <div class="highlight-card card">
+                            <div class="highlight-card-icon"><i data-lucide="layers"></i></div>
+                            <div>
+                                <h3 data-i18n="highlight_title">De la mesa de ayuda al código</h3>
+                                <p data-i18n="highlight_p">Cada módulo ST2 resolvió un dolor concreto del soporte: textos de casos inconsistentes, backups lentos, chequeos de instalación repetitivos. Automatizar eso es mi forma de sumar valor al equipo.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="values-grid">
+                        <div class="value-item"><i data-lucide="shield-check"></i><span data-i18n="value_stability" data-tooltip-key="value_stability_tip">Estabilidad</span></div>
+                        <div class="value-item"><i data-lucide="zap"></i><span data-i18n="value_response" data-tooltip-key="value_response_tip">Respuesta rápida</span></div>
+                        <div class="value-item"><i data-lucide="wrench"></i><span data-i18n="value_tools" data-tooltip-key="value_tools_tip">Herramientas útiles</span></div>
+                        <div class="value-item"><i data-lucide="messages-square"></i><span data-i18n="value_clarity" data-tooltip-key="value_clarity_tip">Claridad</span></div>
+                        <div class="value-item"><i data-lucide="users"></i><span data-i18n="value_teamwork" data-tooltip-key="value_teamwork_tip">Trabajo en equipo</span></div>
+                        <div class="value-item"><i data-lucide="database"></i><span data-i18n="value_data" data-tooltip-key="value_data_tip">Precisión en datos</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience" class="section bg-alt">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-label">02 — <span data-i18n="exp_label">Trayectoria</span></span>
+                    <h2 class="section-title" data-i18n="exp_title">Experiencia</h2>
+                </div>
+                <div class="timeline">
+                    <article class="exp-item card">
+                        <div class="exp-marker" aria-hidden="true"></div>
+                        <div class="exp-date">2023 — <span data-i18n="exp_present">Presente</span></div>
+                        <div class="exp-content">
+                            <div class="exp-company-row">
+                                <img src="https://cdn.simpleicons.org/thomsonreuters/E8E4DD" alt="" class="company-logo" width="28" height="28">
+                                <span class="exp-company">Thomson Reuters Argentina</span>
+                            </div>
+                            <h3 data-i18n="exp_tr_title">Analista de Soporte Técnico</h3>
+                            <ul>
+                                <li data-i18n="exp_tr_b1">Soporte a empresas y estudios contables usuarios de Sistemas Bejerman.</li>
+                                <li data-i18n="exp_tr_b2">Administración SQL Server, instalación y configuración de sistemas.</li>
+                                <li data-i18n="exp_tr_b3">Desarrollo de herramientas de productividad (suite ST2) para el flujo de soporte.</li>
+                            </ul>
+                        </div>
+                    </article>
+                    <article class="exp-item card">
+                        <div class="exp-marker" aria-hidden="true"></div>
+                        <div class="exp-date">2020 — 2023</div>
+                        <div class="exp-content">
+                            <div class="exp-company-row">
+                                <span class="company-logo company-logo--9z" aria-hidden="true">9z</span>
+                                <img src="https://cdn.simpleicons.org/globant/E8E4DD" alt="" class="company-logo" width="28" height="28">
+                                <span class="exp-company">9z Globant / TRAPLIFE</span>
+                            </div>
+                            <h3 data-i18n="exp_9z_title">DBA & IT Support</h3>
+                            <ul>
+                                <li data-i18n="exp_9z_b1">Bases de datos SQL y servidores para plataforma de gaming de alto rendimiento.</li>
+                                <li data-i18n="exp_9z_b2">Gestión de servidores, usuarios VIP y monitoreo de rendimiento.</li>
+                                <li data-i18n="exp_9z_b3">Coordinación con operaciones para mantener la plataforma estable.</li>
+                            </ul>
+                        </div>
+                    </article>
+                    <article class="exp-item card">
+                        <div class="exp-marker" aria-hidden="true"></div>
+                        <div class="exp-date">2020 — 2023</div>
+                        <div class="exp-content">
+                            <div class="exp-company-row">
+                                <span class="company-logo company-logo--text" aria-hidden="true">GMS</span>
+                                <span class="exp-company">GMS SA</span>
+                            </div>
+                            <h3 data-i18n="exp_gms_title">Data Entry Specialist</h3>
+                            <ul>
+                                <li data-i18n="exp_gms_b1">Ingreso y validación de datos con alto nivel de precisión.</li>
+                                <li data-i18n="exp_gms_b2">Control de información y verificación de consistencia.</li>
+                            </ul>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="section">
+            <div class="container">
+                <div class="section-header section-header--center">
+                    <span class="section-label">03 — <span data-i18n="skills_label">Stack</span></span>
+                    <h2 class="section-title" data-i18n="skills_title">Habilidades técnicas</h2>
+                </div>
+                <div class="skills-container">
+                    <div class="skill-card card">
+                        <div class="skill-header"><i data-lucide="database"></i><h3 data-i18n="skills_data_title">Datos & SQL</h3></div>
+                        <div class="tags">
+                            <span>SQL Server</span><span>T-SQL</span><span>MySQL</span><span>SQLite</span><span>SSMS</span><span>BACKUP/RESTORE</span>
+                        </div>
+                    </div>
+                    <div class="skill-card card">
+                        <div class="skill-header"><i data-lucide="monitor"></i><h3 data-i18n="skills_dev_title">Desarrollo .NET</h3></div>
+                        <div class="tags">
+                            <span>C#</span><span>.NET 8 / 9</span><span>WPF</span><span>WinForms</span><span>ASP.NET Core</span><span>WebView2</span>
+                        </div>
+                    </div>
+                    <div class="skill-card card">
+                        <div class="skill-header"><i data-lucide="headphones"></i><h3 data-i18n="skills_support_title">Soporte & Infra</h3></div>
+                        <div class="tags">
+                            <span>Help Desk</span><span>Windows Server</span><span>Active Directory</span><span>Bejerman</span><span>Ticketing</span>
+                        </div>
+                    </div>
+                    <div class="skill-card card">
+                        <div class="skill-header"><i data-lucide="terminal"></i><h3 data-i18n="skills_auto_title">Automatización</h3></div>
+                        <div class="tags">
+                            <span>Python</span><span>PowerShell</span><span>Batch</span><span>PyInstaller</span><span>Git</span><span>Velopack</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="section bg-alt">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-label">04 — <span data-i18n="projects_label">Portfolio</span></span>
+                    <h2 class="section-title" data-i18n="projects_title">Proyectos</h2>
+                    <p class="section-lead" data-i18n="projects_lead">Herramientas de productividad que desarrollé para agilizar el soporte técnico en entornos Bejerman. Proyectos personales, no oficiales de Thomson Reuters.</p>
+                    <p class="compliance-note" data-i18n="projects_disclaimer">Las herramientas ST2 son iniciativas propias de productividad, creadas en el marco de mi rol en soporte. No representan productos ni posiciones oficiales de Thomson Reuters.</p>
+                </div>
+
+                <div class="project-filters" role="tablist">
+                    <button class="project-filter is-active" data-filter="all" role="tab" aria-selected="true" data-i18n="filter_all">Todos</button>
+                    <button class="project-filter" data-filter="st2" role="tab" data-i18n="filter_st2">Suite ST2</button>
+                    <button class="project-filter" data-filter="python" role="tab" data-i18n="filter_python">Python</button>
+                    <button class="project-filter" data-filter="exp" role="tab" data-i18n="filter_exp">Experiencia</button>
+                    <button class="project-filter" data-filter="creative" role="tab" data-i18n="filter_creative">Creativo</button>
+                </div>
+
+                <div class="projects-showcase">
+                    <article class="project-card card project-card--hero" data-category="st2">
+                        <div class="project-visual">
+                            <!-- Reemplazá el mockup: assets/projects/media/st2-desktop.webp | .gif | .mp4 -->
+                            <picture class="project-picture">
+                                <source srcset="assets/projects/media/st2-desktop.webp" type="image/webp">
+                                <source srcset="assets/projects/media/st2-desktop.gif" type="image/gif">
+                                <img src="assets/projects/st2-desktop.svg" alt="ST2 — Sistema de Planillas" loading="lazy">
+                            </picture>
+                        </div>
+                        <div class="project-content">
+                            <span class="project-badge" data-i18n="proj_st2_badge">Desktop · .NET</span>
+                            <h3 data-i18n="proj_st2_title">ST2 — Sistema de Planillas</h3>
+                            <p data-i18n="proj_st2_p1">Suite de escritorio para técnicos de soporte: unifica en un solo lugar la documentación de casos, la búsqueda de conocimiento y el acceso a recursos web del día a día.</p>
+                            <div class="project-features" data-i18n="proj_st2_features"></div>
+                            <div class="project-tags"><span>C#</span><span>.NET 8</span><span>WPF</span><span>WebView2</span><span>SQLite</span></div>
+                        </div>
+                    </article>
+
+                    <article class="project-card card project-card--hero" data-category="st2">
+                        <div class="project-visual">
+                            <picture class="project-picture">
+                                <source srcset="assets/projects/media/st2-web.webp" type="image/webp">
+                                <source srcset="assets/projects/media/st2-web.gif" type="image/gif">
+                                <img src="assets/projects/st2-web.svg" alt="ST2 WEB" loading="lazy">
+                            </picture>
+                        </div>
+                        <div class="project-content">
+                            <span class="project-badge" data-i18n="proj_st2web_badge">Web · misma suite</span>
+                            <h3 data-i18n="proj_st2web_title">ST2 WEB</h3>
+                            <p data-i18n="proj_st2web_p1">La misma suite ST2, accesible desde el navegador. Comparte la lógica del ejecutable en una API con frontend estático — ideal para consultar conocimiento y planillas sin instalar nada.</p>
+                            <div class="project-features" data-i18n="proj_st2web_features"></div>
+                            <div class="project-tags"><span>ASP.NET Core 9</span><span>JavaScript</span><span>REST API</span></div>
+                        </div>
+                    </article>
+
+                    <article class="project-card card" data-category="st2">
+                        <div class="project-visual">
+                            <picture class="project-picture">
+                                <source srcset="assets/projects/media/sbbackup.webp" type="image/webp">
+                                <source srcset="assets/projects/media/sbbackup.gif" type="image/gif">
+                                <img src="assets/projects/sbbackup.svg" alt="ST2 — Backup y Restauración" loading="lazy">
+                            </picture>
+                        </div>
+                        <div class="project-content">
+                            <span class="project-badge" data-i18n="proj_sbbackup_badge">SQL Server</span>
+                            <h3 data-i18n="proj_sbbackup_title">ST2 — Backup y Restauración</h3>
+                            <p data-i18n="proj_sbbackup_p1">Herramienta para respaldar y restaurar bases SQL Server del ecosistema Bejerman, con detección automática del entorno y empaquetado listo para archivar o migrar.</p>
+                            <div class="project-features" data-i18n="proj_sbbackup_features"></div>
+                            <div class="project-tags"><span>C#</span><span>WinForms</span><span>T-SQL</span></div>
+                        </div>
+                    </article>
+
+                    <article class="project-card card project-card--wide" data-category="st2">
+                        <div class="project-visual">
+                            <picture class="project-picture">
+                                <source srcset="assets/projects/media/st2-bat.webp" type="image/webp">
+                                <source srcset="assets/projects/media/st2-bat.gif" type="image/gif">
+                                <img src="assets/projects/st2-bat.svg" alt="ST2.bat" loading="lazy">
+                            </picture>
+                        </div>
+                        <div class="project-content">
+                            <span class="project-badge" data-i18n="proj_st2bat_badge">Scripting · consola</span>
+                            <h3 data-i18n="proj_st2bat_title">ST2.bat — Mantenimiento Bejerman</h3>
+                            <p data-i18n="proj_st2bat_p1">Consola interactiva para técnicos de campo: detecta la instalación desde el registro de Windows y centraliza tareas de diagnóstico y mantenimiento que antes se hacían a mano, una por una.</p>
+                            <div class="project-features" data-i18n="proj_st2bat_features"></div>
+                            <div class="project-tags"><span>Batch</span><span>PowerShell</span><span>Registro Windows</span><span>netsh</span></div>
+                        </div>
+                    </article>
+
+                    <article class="project-card card" data-category="python">
+                        <div class="project-visual">
+                            <picture class="project-picture">
+                                <source srcset="assets/projects/media/planillas-python.webp" type="image/webp">
+                                <img src="assets/projects/planillas-python.svg" alt="Sistema de Planillas" loading="lazy">
+                            </picture>
+                        </div>
+                        <div class="project-content">
+                            <span class="project-badge" data-i18n="proj_planillas_badge">Origen de ST2 · Python</span>
+                            <h3 data-i18n="proj_planillas_title">Sistema de Planillas</h3>
+                            <p data-i18n="proj_planillas_p1">Primera versión del generador de casos: formularios guiados que arman el texto del ticket con la estructura que pide cada tipo de gestión, listo para copiar al sistema de incidencias.</p>
+                            <div class="project-features" data-i18n="proj_planillas_features"></div>
+                            <div class="project-tags"><span>Python</span><span>Tkinter</span><span>PyInstaller</span></div>
+                        </div>
+                    </article>
+
+                    <article class="project-card card" data-category="exp">
+                        <div class="project-visual"><img src="assets/projects/bejerman-sql.svg" alt="" loading="lazy"></div>
+                        <div class="project-content">
+                            <span class="project-badge" data-i18n="proj_bej_badge">Thomson Reuters</span>
+                            <h3 data-i18n="proj_bej_title">Gestión SQL Bejerman</h3>
+                            <p data-i18n="proj_bej_p1">Optimización de consultas y mantenimiento SQL Server para clientes enterprise Bejerman.</p>
+                            <div class="project-tags"><span>SQL Server</span><span>T-SQL</span><span>SSMS</span></div>
+                        </div>
+                    </article>
+
+                    <article class="project-card card" data-category="exp">
+                        <div class="project-visual"><img src="assets/projects/9z-gaming.svg" alt="" loading="lazy"></div>
+                        <div class="project-content">
+                            <span class="project-badge" data-i18n="proj_9z_badge">9z Globant</span>
+                            <h3 data-i18n="proj_9z_title">Infraestructura 9z Gaming</h3>
+                            <p data-i18n="proj_9z_p1">Servidores dedicados de alta disponibilidad y monitoreo para gaming competitivo.</p>
+                            <div class="project-tags"><span>Windows Server</span><span>MySQL</span><span>Redes</span></div>
+                        </div>
+                    </article>
+
+                    <article class="project-card card project-card--game" data-category="creative">
+                        <div class="project-visual project-visual--game"><img src="assets/projects/referral-runner.svg" alt="" loading="lazy"></div>
+                        <div class="project-content">
+                            <span class="project-badge" data-i18n="proj_game_badge">Canvas · arcade</span>
+                            <h3 data-i18n="proj_game_title">Referral Runner</h3>
+                            <p data-i18n="proj_game_p1">Endless runner en Canvas con temática de mesa de ayuda: combos, power-ups y modo BUOL.</p>
+                            <div class="project-tags"><span>JavaScript</span><span>Canvas 2D</span><span>Game loop</span></div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section">
+            <div class="container">
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <span class="section-label">05 — <span data-i18n="contact_label">Contacto</span></span>
+                        <h2 class="section-title" data-i18n="contact_title">¿Hablamos?</h2>
+                        <p data-i18n="contact_subtitle">Disponible para consultas técnicas, colaboraciones en herramientas de soporte u oportunidades en IT.</p>
+                        <a href="mailto:leord.gallo@gmail.com" class="contact-email">
+                            <i data-lucide="mail"></i>
+                            leord.gallo@gmail.com
+                        </a>
+                        <div class="contact-links">
+                            <a href="https://www.linkedin.com/in/l-gallo/" target="_blank" rel="noopener noreferrer" class="contact-link-item">
+                                <i data-lucide="linkedin"></i>
+                                <span>LinkedIn</span>
+                            </a>
+                            <a href="https://github.com/soytolei" target="_blank" rel="noopener noreferrer" class="contact-link-item">
+                                <i data-lucide="github"></i>
+                                <span>GitHub @soytolei</span>
+                            </a>
+                            <a href="https://github.com/soyleonelgallo" target="_blank" rel="noopener noreferrer" class="contact-link-item">
+                                <i data-lucide="github"></i>
+                                <span>GitHub @soyleonelgallo</span>
+                            </a>
+                        </div>
+                        <a href="CV2026.pdf" class="btn btn-secondary contact-cv" download data-i18n="cv_button">Descargar CV</a>
+                    </div>
+                    <div class="contact-form-card card">
+                        <form class="contact-form" action="https://formsubmit.co/leord.gallo@gmail.com" method="POST">
+                            <input type="hidden" name="_subject" value="Nuevo contacto desde Portfolio">
+                            <input type="hidden" name="_template" value="table">
+                            <input type="hidden" name="_next" value="https://formsubmit.co/thanks">
+                            <div class="input-group">
+                                <label for="contact-name" data-i18n="contact_name_label">Nombre</label>
+                                <input type="text" id="contact-name" name="name" required data-i18n-placeholder="contact_name_placeholder">
+                            </div>
+                            <div class="input-group">
+                                <label for="contact-email" data-i18n="contact_email_label">Email</label>
+                                <input type="email" id="contact-email" name="email" required data-i18n-placeholder="contact_email_placeholder">
+                            </div>
+                            <div class="input-group">
+                                <label for="contact-message" data-i18n="contact_message_label">Mensaje</label>
+                                <textarea id="contact-message" name="message" rows="4" required data-i18n-placeholder="contact_message_placeholder"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary" data-i18n="contact_button">Enviar mensaje</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <span class="logo-mark">T.</span>
+                <span data-i18n="footer_text">Tolei (Leonel Gallo) — Buenos Aires, Argentina</span>
+            </div>
+            <nav class="footer-nav" aria-label="Enlaces rápidos">
+                <a href="#about" data-i18n="nav_about">Sobre mí</a>
+                <a href="#projects" data-i18n="nav_projects">Proyectos</a>
+                <a href="#contact" data-i18n="nav_contact">Contacto</a>
+            </nav>
+            <p class="footer-copy">&copy; 2026</p>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>

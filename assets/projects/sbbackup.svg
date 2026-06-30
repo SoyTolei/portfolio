@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" fill="none">
+  <rect width="640" height="360" fill="#0F0F0F"/>
+  <rect x="32" y="32" width="576" height="296" rx="12" fill="#141414" stroke="rgba(255,255,255,0.1)"/>
+  <text x="56" y="72" fill="#E8E4DD" font-family="system-ui,sans-serif" font-size="20" font-weight="700">ST2  Backup y Restauraciùn</text>
+  <text x="56" y="96" fill="#737373" font-family="system-ui,sans-serif" font-size="12">Bases SQL Server ù ecosistema Bejerman</text>
+  <rect x="56" y="116" width="240" height="72" rx="8" fill="#1A1A1A" stroke="rgba(255,255,255,0.06)"/>
+  <text x="72" y="140" fill="#737373" font-family="system-ui,sans-serif" font-size="10">SERVIDOR</text>
+  <text x="72" y="164" fill="#E8E4DD" font-family="monospace" font-size="13">.\SQLEXPRESS</text>
+  <rect x="312" y="116" width="272" height="72" rx="8" fill="#1A1A1A" stroke="rgba(255,255,255,0.06)"/>
+  <text x="328" y="140" fill="#737373" font-family="system-ui,sans-serif" font-size="10">BASES SELECCIONADAS</text>
+  <text x="328" y="164" fill="#E8E4DD" font-family="monospace" font-size="12">SBDA_EMP ù SJ_2024 ù manager</text>
+  <rect x="56" y="208" width="528" height="12" rx="6" fill="#1C1C1C"/>
+  <rect x="56" y="208" width="380" height="12" rx="6" fill="#F35C19" opacity="0.85"/>
+  <text x="56" y="244" fill="#737373" font-family="system-ui,sans-serif" font-size="11">Backup en progreso& 72%</text>
+  <rect x="56" y="260" width="140" height="36" rx="8" fill="#F35C19"/>
+  <text x="126" y="283" text-anchor="middle" fill="#090909" font-family="system-ui,sans-serif" font-size="12" font-weight="600">Backup ZIP</text>
+  <rect x="208" y="260" width="140" height="36" rx="8" fill="#1C1C1C" stroke="rgba(255,255,255,0.12)"/>
+  <text x="278" y="283" text-anchor="middle" fill="#E8E4DD" font-family="system-ui,sans-serif" font-size="12">Restaurar</text>
+  <circle cx="560" cy="72" r="28" fill="rgba(232,228,221,0.08)" stroke="rgba(232,228,221,0.2)"/>
+  <path d="M560 58v20M550 68h20" stroke="#E8E4DD" stroke-width="2" stroke-linecap="round"/>
+</svg>
