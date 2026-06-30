@@ -815,10 +815,14 @@ a { color: inherit; }
     opacity: 0;
     transition: opacity 0.22s ease;
     pointer-events: none;
+    background: var(--surface);
 }
 
 .work-thumb--hover .work-thumb__preview img {
-    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    background: var(--surface);
 }
 
 .work-thumb--hover:hover,
@@ -828,6 +832,20 @@ a { color: inherit; }
     box-shadow:
         0 18px 48px rgba(0, 0, 0, 0.48),
         0 0 0 1px var(--border);
+}
+
+.work-thumb--game.work-thumb--hover:hover,
+.work-thumb--game.work-thumb--hover:focus-visible {
+    transform: scale(2.15);
+}
+
+.work-thumb--game.work-thumb--hover .work-thumb__preview img {
+    object-fit: contain;
+    background: #0e0e0c;
+}
+
+[data-theme="light"] .work-thumb--game.work-thumb--hover .work-thumb__preview img {
+    background: #1a1a18;
 }
 
 .work-thumb--hover:has(.work-thumb__preview img):hover .work-thumb__cover,
@@ -845,6 +863,11 @@ a { color: inherit; }
     .work-thumb--hover:focus-visible {
         transform: scale(2);
         transform-origin: center center;
+    }
+
+    .work-thumb--game.work-thumb--hover:hover,
+    .work-thumb--game.work-thumb--hover:focus-visible {
+        transform: scale(1.55);
     }
 }
 
