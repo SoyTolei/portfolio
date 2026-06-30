@@ -553,13 +553,31 @@ a { color: inherit; }
 }
 
 .exp-logo--gms {
-    filter: grayscale(0.1) brightness(1.35) contrast(1.05);
-    opacity: 0.65;
+    background: #fff;
+    border-radius: 6px;
+    padding: 4px;
+    filter: none;
+    opacity: 1;
 }
 
 [data-theme="light"] .exp-logo--gms {
-    filter: grayscale(0.05) brightness(0.9);
-    opacity: 0.78;
+    background: #fff;
+    border: 1px solid var(--border-soft);
+    opacity: 1;
+}
+
+.exp-logo--brinks {
+    background: #fff;
+    border-radius: 6px;
+    padding: 3px;
+    filter: none;
+    opacity: 1;
+}
+
+[data-theme="light"] .exp-logo--brinks {
+    background: #fff;
+    border: 1px solid var(--border-soft);
+    opacity: 1;
 }
 
 .exp-logo--9z {
