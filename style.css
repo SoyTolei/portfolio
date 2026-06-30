@@ -229,9 +229,9 @@ a { color: inherit; }
 
 .hero-layout {
     display: grid;
-    grid-template-columns: 1.15fr 0.85fr;
-    gap: 48px;
-    align-items: start;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 40px;
+    align-items: center;
 }
 
 .hero-eyebrow {
@@ -334,30 +334,80 @@ a { color: inherit; }
     gap: 10px;
 }
 
-.hero-photo {
-    margin: 0;
-    border: 1px solid var(--border);
-    border-radius: var(--radius);
-    background: var(--surface);
-    overflow: hidden;
-}
-
-.hero-photo img {
-    display: block;
+/* Avatar + chips */
+.hero-visual {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 320px;
     width: 100%;
-    height: auto;
-    aspect-ratio: 4 / 5;
-    object-fit: cover;
-    object-position: center top;
-    filter: grayscale(12%) contrast(1.02);
+    max-width: 360px;
+    margin-inline: auto;
 }
 
-.photo-caption {
-    padding: 10px 14px;
+.avatar-ring {
+    width: min(268px, 58vw);
+    height: min(268px, 58vw);
+    border-radius: 50%;
+    padding: 3px;
+    background: linear-gradient(150deg, var(--accent) 0%, var(--border) 55%, transparent 100%);
+    position: relative;
+    z-index: 1;
+    flex-shrink: 0;
+}
+
+.avatar-img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center 22%;
+    display: block;
+    background: var(--surface);
+}
+
+.hero-chips {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+}
+
+.chip {
+    position: absolute;
     font-family: var(--mono);
     font-size: 0.68rem;
-    color: var(--text-dim);
-    border-top: 1px solid var(--border-soft);
+    font-weight: 500;
+    padding: 6px 11px;
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+    background: var(--surface);
+    color: var(--text-muted);
+    white-space: nowrap;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.18);
+    animation: chip-float 5s ease-in-out infinite;
+}
+
+.chip--accent {
+    color: var(--accent);
+    border-color: rgba(243, 92, 25, 0.35);
+    background: var(--accent-dim);
+}
+
+.chip:nth-child(1) { top: 2%; left: 50%; transform: translateX(-50%); animation-name: chip-float-center; }
+.chip:nth-child(2) { top: 26%; right: -2%; animation-delay: 0.7s; }
+.chip:nth-child(3) { bottom: 10%; right: 2%; animation-delay: 1.4s; }
+.chip:nth-child(4) { bottom: 10%; left: 2%; animation-delay: 2.1s; }
+.chip:nth-child(5) { top: 26%; left: -2%; animation-delay: 2.8s; }
+
+@keyframes chip-float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+}
+
+@keyframes chip-float-center {
+    0%, 100% { transform: translateX(-50%) translateY(0); }
+    50% { transform: translateX(-50%) translateY(-5px); }
 }
 
 /* ── Blocks ── */
@@ -676,10 +726,20 @@ a { color: inherit; }
 @media (max-width: 860px) {
     .hero-layout {
         grid-template-columns: 1fr;
-        gap: 32px;
+        gap: 36px;
+        text-align: center;
     }
 
-    .hero-photo { max-width: 280px; }
+    .hero-lead { margin-inline: auto; }
+    .hero-actions { justify-content: center; }
+    .terminal { text-align: left; }
+
+    .hero-visual {
+        order: -1;
+        min-height: 280px;
+    }
+
+    .hero-chips { display: none; }
 
     .exp-row {
         grid-template-columns: 1fr;
