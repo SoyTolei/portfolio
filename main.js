@@ -264,6 +264,8 @@ const THEME_KEY = 'tolei-portfolio-theme';
 
 function applyTheme(theme) {
     document.documentElement.setAttribute('data-theme', theme);
+    const metaTheme = document.querySelector('meta[name="theme-color"]');
+    if (metaTheme) metaTheme.setAttribute('content', theme === 'dark' ? '#0e0e0c' : '#f6f5f2');
     if (themeToggle) {
         themeToggle.setAttribute('data-theme', theme);
         themeToggle.setAttribute('aria-label', theme === 'dark' ? 'Activar modo claro' : 'Activar modo oscuro');
@@ -273,11 +275,10 @@ function applyTheme(theme) {
 
 if (themeToggle) {
     const saved = localStorage.getItem(THEME_KEY);
-    const prefersLight = window.matchMedia('(prefers-color-scheme: light)').matches;
-    applyTheme(saved || (prefersLight ? 'light' : 'dark'));
+    applyTheme(saved || 'light');
 
     themeToggle.addEventListener('click', () => {
-        const current = document.documentElement.getAttribute('data-theme') || 'dark';
+        const current = document.documentElement.getAttribute('data-theme') || 'light';
         applyTheme(current === 'dark' ? 'light' : 'dark');
     });
 }

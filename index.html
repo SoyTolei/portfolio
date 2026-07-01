@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,13 +8,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@700;800;900&family=Archivo+Black&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <meta name="theme-color" content="#0e0e0c">
+    <meta name="theme-color" content="#f6f5f2">
     <link rel="stylesheet" href="style.css">
     <script>
         (function () {
-            var theme = localStorage.getItem('tolei-portfolio-theme');
-            if (!theme && window.matchMedia('(prefers-color-scheme: light)').matches) theme = 'light';
-            if (theme) document.documentElement.setAttribute('data-theme', theme);
+            var theme = localStorage.getItem('tolei-portfolio-theme') || 'light';
+            document.documentElement.setAttribute('data-theme', theme);
         })();
     </script>
 </head>
@@ -36,7 +35,7 @@
                     <a href="#contact" class="nav-link" data-i18n="nav_contact">Contacto</a>
                 </nav>
                 <div class="header-utils">
-                    <button class="util-btn theme-toggle" type="button" aria-label="Cambiar tema" data-theme="dark">
+                    <button class="util-btn theme-toggle" type="button" aria-label="Activar modo oscuro" data-theme="light">
                         <span class="theme-icon theme-icon-sun" aria-hidden="true">☀</span>
                         <span class="theme-icon theme-icon-moon" aria-hidden="true">☽</span>
                     </button>
