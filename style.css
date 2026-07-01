@@ -413,10 +413,16 @@ a { color: inherit; }
 
 .t-block:last-child { margin-bottom: 0; }
 
+.t-loc {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    white-space: nowrap;
+}
+
 .t-flag {
-    display: inline-block;
-    vertical-align: -1px;
-    margin-left: 7px;
+    display: block;
+    flex-shrink: 0;
     border: 1px solid var(--ink);
     border-radius: 2px;
     box-shadow: 1px 1px 0 var(--ink);
