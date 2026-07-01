@@ -396,33 +396,34 @@ a { color: inherit; }
 }
 
 .terminal-body {
-    padding: 14px 16px;
+    padding: 12px 16px;
     font-family: var(--mono);
     font-size: 0.78rem;
-    line-height: 1.55;
+    line-height: 1.38;
     overflow-x: auto;
     color: var(--text-muted);
 }
 
 .terminal-body code { white-space: pre-wrap; }
 
-.t-block {
+.t-group {
     display: block;
-    margin-bottom: 0.42em;
+    margin-bottom: 0.3em;
 }
 
-.t-block:last-child { margin-bottom: 0; }
+.t-group:last-child { margin-bottom: 0; }
 
-.t-loc {
-    display: inline-flex;
-    align-items: center;
-    gap: 7px;
-    white-space: nowrap;
+.t-line {
+    display: block;
+    line-height: 1.38;
 }
+
+.t-line + .t-line { margin-top: 0.05em; }
 
 .t-flag {
-    display: block;
-    flex-shrink: 0;
+    display: inline-block;
+    vertical-align: -1px;
+    margin-left: 6px;
     border: 1px solid var(--ink);
     border-radius: 2px;
     box-shadow: 1px 1px 0 var(--ink);
