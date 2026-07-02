@@ -482,9 +482,10 @@ a { color: inherit; }
     animation: chip-float 5s ease-in-out infinite 2.4s;
 }
 
-.avatar-badge img {
+.avatar-badge img,
+.avatar-badge__img {
     display: block;
-    width: 26px;
+    width: 28px;
     height: auto;
     image-rendering: pixelated;
 }
