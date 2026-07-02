@@ -72,7 +72,7 @@
                     </div>
                     <div class="hero-actions">
                         <a href="#projects" class="btn btn-primary" data-i18n="hero_cta_projects">Ver proyectos</a>
-                        <a href="CV2026.pdf" class="btn btn-ghost" download data-i18n="hero_cta_cv">CV</a>
+                        <a href="CV2026.pdf" class="btn btn-ghost" download data-cv-link data-i18n="hero_cta_cv">CV</a>
                     </div>
                 </div>
                 <div class="hero-visual" aria-hidden="false">
@@ -249,7 +249,7 @@
                                 </div>
                                 <h4 data-i18n="proj_sbbackup_title">ST2 — Backup y Restauración</h4>
                             </div>
-                            <p data-i18n="proj_sbbackup_p1">Backup y restore de bases Bejerman con detección de entorno y empaquetado listo para archivar o migrar.</p>
+                            <p data-i18n="proj_sbbackup_p1">Exclusivo para sistemas Bejerman: lee la estructura de la base y genera backups e información válidos únicamente para ese entorno. Detección automática del entorno y empaquetado listo para archivar o migrar.</p>
                             <p class="work-stack">C# · WinForms · T-SQL</p>
                         </div>
                         <div class="work-thumb work-thumb--hover" tabindex="0" role="img" aria-label="ST2 Backup">
@@ -268,7 +268,7 @@
                                 </div>
                                 <h4 data-i18n="proj_st2bat_title">ST2.bat — Mantenimiento Bejerman</h4>
                             </div>
-                            <p data-i18n="proj_st2bat_p1">El primer módulo de la suite: consola de campo que detecta instalación por registro y centraliza diagnósticos que antes eran 15 pasos manuales.</p>
+                            <p data-i18n="proj_st2bat_p1">El primer módulo de la suite: consola de campo que automatiza tareas que antes hacíamos a mano — permisos, rutas de ejecutables, restricciones, registro de DLLs y archivos — y centraliza el diagnóstico de la instalación vía registro de Windows.</p>
                             <p class="work-stack">Batch · PowerShell · Registro Windows</p>
                         </div>
                         <div class="work-thumb work-thumb--hover" tabindex="0" role="img" aria-label="ST2.bat">
@@ -288,7 +288,7 @@
                                 </div>
                                 <h4 data-i18n="proj_game_title">Referral Runner</h4>
                             </div>
-                            <p data-i18n="proj_game_p1">Juego de plataforma en el navegador: corrés, esquivás obstáculos y sumás puntos. Hecho con JavaScript y Canvas 2D.</p>
+                            <p data-i18n="proj_game_p1">Runner en el navegador inspirado en el dino de Chrome, pero ambientado en la oficina: corrés por el pasillo esquivando mails, tickets y reuniones mientras sumás puntos. Proyecto personal con JavaScript y Canvas 2D.</p>
                             <p class="work-stack">JavaScript · Canvas 2D</p>
                         </div>
                         <a class="work-thumb work-thumb--hover work-thumb--game" href="https://referralrunner.tolei.dev" target="_blank" rel="noopener noreferrer" aria-label="Referral Runner">
@@ -313,12 +313,12 @@
                 <div class="contact-panel">
                     <a href="mailto:leord.gallo@gmail.com" class="contact-primary">
                         <span class="contact-icon" aria-hidden="true">✉</span>
-                        <span>leord.gallo@gmail.com</span>
+                        <span data-i18n="contact_email">Escribir por correo</span>
                     </a>
                     <ul class="contact-channels">
                         <li><a href="https://www.linkedin.com/in/l-gallo/" target="_blank" rel="noopener noreferrer"><span class="contact-icon" aria-hidden="true">in</span><span>LinkedIn</span></a></li>
                         <li><a href="https://github.com/soytolei" target="_blank" rel="noopener noreferrer"><span class="contact-icon" aria-hidden="true">gh</span><span>GitHub @soytolei</span></a></li>
-                        <li><a href="CV2026.pdf" download><span class="contact-icon" aria-hidden="true">↓</span><span data-i18n="cv_button">Descargar CV</span></a></li>
+                        <li><a href="CV2026.pdf" download data-cv-link><span class="contact-icon" aria-hidden="true">↓</span><span data-i18n="cv_button">Descargar CV</span></a></li>
                     </ul>
                 </div>
             </div>

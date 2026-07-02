@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Leonel Gallo — Resume</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --ink: #1a1a1a;
+            --muted: #555;
+            --accent: #c45c26;
+            --line: #ddd;
+            --sidebar: #f6f6f6;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: 'IBM Plex Sans', system-ui, sans-serif;
+            font-size: 10.5pt;
+            line-height: 1.45;
+            color: var(--ink);
+            background: #e8e8e8;
+        }
+
+        .page {
+            width: 210mm;
+            min-height: 297mm;
+            margin: 16px auto;
+            background: #fff;
+            display: grid;
+            grid-template-columns: 68mm 1fr;
+        }
+
+        .sidebar {
+            background: var(--sidebar);
+            padding: 14mm 10mm;
+            border-right: 1px solid var(--line);
+        }
+
+        .main {
+            padding: 14mm 12mm 14mm 10mm;
+        }
+
+        h1 {
+            font-size: 20pt;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            line-height: 1.1;
+        }
+
+        .alias {
+            font-size: 11pt;
+            font-weight: 500;
+            color: var(--accent);
+            margin-top: 2px;
+        }
+
+        .role {
+            font-size: 10pt;
+            color: var(--muted);
+            margin-top: 8px;
+            font-weight: 500;
+        }
+
+        .block { margin-top: 18px; }
+
+        .block h2 {
+            font-size: 8pt;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--accent);
+            margin-bottom: 8px;
+            padding-bottom: 4px;
+            border-bottom: 1px solid var(--line);
+        }
+
+        .contact a,
+        .contact span {
+            display: block;
+            font-size: 9pt;
+            color: var(--ink);
+            text-decoration: none;
+            margin-bottom: 5px;
+            word-break: break-word;
+        }
+
+        .skills li {
+            font-size: 9pt;
+            margin-bottom: 4px;
+            list-style: none;
+            padding-left: 10px;
+            position: relative;
+        }
+
+        .skills li::before {
+            content: '·';
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-weight: 700;
+        }
+
+        .skills-group { margin-bottom: 10px; }
+        .skills-group strong { display: block; font-size: 8.5pt; margin-bottom: 4px; }
+
+        .summary {
+            font-size: 10pt;
+            color: #333;
+            margin-bottom: 16px;
+        }
+
+        .job { margin-bottom: 14px; page-break-inside: avoid; }
+
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .job h3 { font-size: 10.5pt; font-weight: 600; }
+        .job .org { font-size: 9.5pt; color: var(--muted); margin-top: 1px; }
+        .job time { font-size: 8.5pt; color: var(--muted); white-space: nowrap; }
+        .job ul { margin-top: 5px; padding-left: 16px; }
+        .job li { font-size: 9.5pt; margin-bottom: 2px; }
+
+        .project { margin-bottom: 8px; }
+        .project strong { font-size: 9.5pt; }
+        .project p { font-size: 9pt; color: #444; margin-top: 1px; }
+        .project .stack { font-size: 8pt; color: var(--muted); }
+
+        .edu p { font-size: 9.5pt; }
+        .edu .detail { color: var(--muted); font-size: 9pt; }
+
+        .disclaimer {
+            font-size: 7.5pt;
+            color: var(--muted);
+            margin-top: 10px;
+            font-style: italic;
+        }
+
+        @media print {
+            body { background: #fff; }
+            .page { margin: 0; width: auto; min-height: auto; }
+        }
+
+        @page { size: A4; margin: 0; }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <aside class="sidebar">
+            <h1>Leonel Gallo</h1>
+            <p class="alias">Tolei</p>
+            <p class="role">Technical Support<br>SQL Server · .NET</p>
+
+            <div class="block contact">
+                <h2>Contact</h2>
+                <a href="mailto:leord.gallo@gmail.com">leord.gallo@gmail.com</a>
+                <span>Buenos Aires, Argentina</span>
+                <a href="https://tolei.dev">tolei.dev</a>
+                <a href="https://www.linkedin.com/in/l-gallo/">linkedin.com/in/l-gallo</a>
+                <a href="https://github.com/soytolei">github.com/soytolei</a>
+            </div>
+
+            <div class="block skills">
+                <h2>Skills</h2>
+                <div class="skills-group">
+                    <strong>Technical</strong>
+                    <ul>
+                        <li>SQL Server · T-SQL · SSMS</li>
+                        <li>C# · .NET · WPF · ASP.NET Core</li>
+                        <li>Python · PowerShell · Batch</li>
+                        <li>Windows Server · MySQL</li>
+                        <li>System installation &amp; configuration</li>
+                        <li>Production troubleshooting &amp; support</li>
+                    </ul>
+                </div>
+                <div class="skills-group">
+                    <strong>Professional</strong>
+                    <ul>
+                        <li>End-user support</li>
+                        <li>Incident management &amp; documentation</li>
+                        <li>Cross-team communication</li>
+                        <li>Teamwork</li>
+                        <li>Case tracking &amp; organisation</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="block edu">
+                <h2>Education</h2>
+                <p><strong>Escuela Normal Superior Antonio Mentruyt</strong></p>
+                <p class="detail">2005 — 2008 · High School Diploma, Social Sciences</p>
+            </div>
+
+            <div class="block">
+                <h2>Languages</h2>
+                <p style="font-size:9.5pt;">English — intermediate<br><span style="color:var(--muted);font-size:9pt;">Fluent reading &amp; conversation</span></p>
+            </div>
+        </aside>
+
+        <main class="main">
+            <p class="summary">
+                Technical support analyst with experience in enterprise and gaming environments.
+                Currently at Thomson Reuters providing Bejerman support (SQL Server, installs, queries).
+                I build personal tools in .NET and Python to automate repetitive help-desk tasks.
+            </p>
+
+            <div class="block">
+                <h2>Experience</h2>
+
+                <article class="job">
+                    <div class="job-header">
+                        <div>
+                            <h3>Technical Support Analyst</h3>
+                            <p class="org">Thomson Reuters</p>
+                        </div>
+                        <time>2023 — present</time>
+                    </div>
+                    <ul>
+                        <li>Bejerman support for companies and accounting firms.</li>
+                        <li>SQL Server, system installation and configuration.</li>
+                        <li>ST2 suite development for daily support workflow.</li>
+                    </ul>
+                </article>
+
+                <article class="job">
+                    <div class="job-header">
+                        <div>
+                            <h3>DBA &amp; IT Support</h3>
+                            <p class="org">9z · Globant</p>
+                        </div>
+                        <time>2020 — 2023</time>
+                    </div>
+                    <ul>
+                        <li>SQL and servers for a competitive gaming platform.</li>
+                        <li>VIP users, monitoring and availability.</li>
+                        <li>Coordination with ops in high-load environments.</li>
+                    </ul>
+                </article>
+
+                <article class="job">
+                    <div class="job-header">
+                        <div>
+                            <h3>Data Entry Specialist</h3>
+                            <p class="org">GMS SA</p>
+                        </div>
+                        <time>2020 — 2023</time>
+                    </div>
+                    <ul>
+                        <li>Data entry and validation with high accuracy.</li>
+                        <li>Consistency control in operational databases.</li>
+                    </ul>
+                </article>
+
+                <article class="job">
+                    <div class="job-header">
+                        <div>
+                            <h3>Data Entry</h3>
+                            <p class="org">Brink's Argentina</p>
+                        </div>
+                        <time>Apr 2019 — Jan 2020</time>
+                    </div>
+                    <ul>
+                        <li>Loading and control of operational documentation.</li>
+                        <li>Record validation and information reconciliation.</li>
+                    </ul>
+                </article>
+            </div>
+
+            <div class="block">
+                <h2>Selected projects</h2>
+
+                <div class="project">
+                    <strong>ST2 WEB</strong> — <span class="stack">ASP.NET Core · JavaScript · REST</span>
+                    <p>Browser-based support suite: case sheets, search and server API. st2.tolei.dev</p>
+                </div>
+                <div class="project">
+                    <strong>ST2.exe</strong> — <span class="stack">C# · .NET 8 · WPF · WebView2 · SQLite</span>
+                    <p>Desktop suite version used in production until the web migration. Documentation and knowledge base.</p>
+                </div>
+                <div class="project">
+                    <strong>ST2 — Backup &amp; Restore</strong> — <span class="stack">C# · WinForms · T-SQL</span>
+                    <p>Bejerman-only backup and restore with database structure detection.</p>
+                </div>
+                <div class="project">
+                    <strong>ST2.bat — Bejerman Maintenance</strong> — <span class="stack">Batch · PowerShell</span>
+                    <p>Field diagnostic console that centralises install checks.</p>
+                </div>
+
+                <p class="disclaimer">ST2 tools are personal initiatives and do not represent official Thomson Reuters products.</p>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

@@ -143,15 +143,16 @@ const translations = {
         proj_st2_badge: 'Ejecutable · .NET',
         proj_st2_p1: 'Ejecutable desktop de la suite, usado en producción hasta la migración web. Documentación de casos, base de conocimiento y recursos técnicos en un solo ejecutable.',
         proj_sbbackup_title: 'ST2 — Backup y Restauración',
-        proj_sbbackup_p1: 'Backup y restore de bases Bejerman con detección de entorno y empaquetado listo para archivar o migrar.',
+        proj_sbbackup_p1: 'Exclusivo para sistemas Bejerman: lee la estructura de la base y genera backups e información válidos únicamente para ese entorno. Detección automática del entorno y empaquetado listo para archivar o migrar.',
         proj_st2bat_title: 'ST2.bat — Mantenimiento Bejerman',
-        proj_st2bat_p1: 'El primer módulo de la suite: consola de campo que detecta instalación por registro y centraliza diagnósticos que antes eran 15 pasos manuales.',
+        proj_st2bat_p1: 'El primer módulo de la suite: consola de campo que automatiza tareas que antes hacíamos a mano — permisos, rutas de ejecutables, restricciones, registro de DLLs y archivos — y centraliza el diagnóstico de la instalación vía registro de Windows.',
         proj_game_title: 'Referral Runner',
         proj_game_badge: 'Personal',
-        proj_game_p1: 'Juego de plataforma en el navegador: corrés, esquivás obstáculos y sumás puntos. Hecho con JavaScript y Canvas 2D.',
+        proj_game_p1: 'Runner en el navegador inspirado en el dino de Chrome, pero ambientado en la oficina: corrés por el pasillo esquivando mails, tickets y reuniones mientras sumás puntos. Proyecto personal con JavaScript y Canvas 2D.',
         contact_eyebrow: '// ping',
         contact_title: 'Contacto',
         contact_subtitle: 'Consultas técnicas, colaboraciones en herramientas de soporte u oportunidades en IT.',
+        contact_email: 'Escribir por correo',
         cv_button: 'Descargar CV',
         footer_text: 'Tolei · Leonel Gallo · Buenos Aires'
     },
@@ -216,21 +217,32 @@ const translations = {
         proj_st2_badge: 'Executable · .NET',
         proj_st2_p1: 'Desktop executable of the suite, used in production until the web migration. Case documentation, knowledge base and technical resources in one place.',
         proj_sbbackup_title: 'ST2 — Backup & Restore',
-        proj_sbbackup_p1: 'Backup and restore Bejerman databases with environment detection and archive-ready packaging.',
+        proj_sbbackup_p1: 'Bejerman-only: reads the database structure and produces backups and output valid only for that system. Automatic environment detection and archive-ready packaging.',
         proj_st2bat_title: 'ST2.bat — Bejerman Maintenance',
-        proj_st2bat_p1: 'The first suite module: field console that detects install via registry and centralises diagnostics that used to be 15 manual steps.',
+        proj_st2bat_p1: 'The first suite module: a field console that automates tasks we used to do manually — permissions, executable paths, restrictions, DLL and file registration — and centralises install diagnostics via the Windows registry.',
         proj_game_title: 'Referral Runner',
         proj_game_badge: 'Personal',
-        proj_game_p1: 'Browser platformer: run, dodge obstacles and score points. Built with JavaScript and Canvas 2D.',
+        proj_game_p1: 'A browser runner inspired by Chrome\'s dino game, but set in the office: sprint down the hallway dodging emails, tickets and meetings while scoring points. Personal project built with JavaScript and Canvas 2D.',
         contact_eyebrow: '// ping',
         contact_title: 'Contact',
         contact_subtitle: 'Technical consulting, support tooling collaborations or IT opportunities.',
+        contact_email: 'Send an email',
         cv_button: 'Download CV',
         footer_text: 'Tolei · Leonel Gallo · Buenos Aires'
     }
 };
 
 let currentLang = 'es';
+
+const CV_FILES = { es: 'CV2026.pdf', en: 'CV2026_EN.pdf' };
+
+function updateCvLinks(lang) {
+    const file = CV_FILES[lang] || CV_FILES.es;
+    document.querySelectorAll('[data-cv-link]').forEach(el => {
+        el.setAttribute('href', file);
+        el.setAttribute('download', file);
+    });
+}
 
 function applyTranslations(lang) {
     const dict = translations[lang];
@@ -242,6 +254,8 @@ function applyTranslations(lang) {
         const value = dict[el.getAttribute('data-i18n')];
         if (value) el.innerHTML = value;
     });
+
+    updateCvLinks(lang);
 }
 
 const langToggle = document.querySelector('.lang-toggle');
