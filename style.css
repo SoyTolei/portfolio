@@ -467,6 +467,28 @@ a { color: inherit; }
     transition: box-shadow 0.25s ease, transform 0.25s ease;
 }
 
+.avatar-badge {
+    position: absolute;
+    right: -4px;
+    bottom: 6px;
+    z-index: 4;
+    padding: 5px 6px 4px;
+    background: var(--surface);
+    border: var(--stroke) solid var(--ink);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-sm);
+    line-height: 0;
+    pointer-events: none;
+    animation: chip-float 5s ease-in-out infinite 2.4s;
+}
+
+.avatar-badge img {
+    display: block;
+    width: 26px;
+    height: auto;
+    image-rendering: pixelated;
+}
+
 .avatar-ring::before {
     content: '';
     position: absolute;
